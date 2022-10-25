@@ -1,0 +1,7 @@
+**/.terraform/*
+services/webserver-cluster/.terraform/*
+services/webserver-cluster/terraform.tfstate.backup
+.terraform
+.tfstate-backup
+.tfstate
+*terraform-provider*
