@@ -68,10 +68,10 @@ resource "aws_autoscaling_group" "instance_1" {
 	vpc_zone_identifier = data.aws_subnets.default.ids
 	target_group_arns = [aws_lb_target_group.asg.arn]
 	health_check_type = "ELB"
-	min_size = 1
-	max_size = 3
+	min_size = var.min_size
+	max_size = var.max_size
 	depends_on = [data.aws_vpc.default]
-	desired_capacity = 2
+	desired_capacity = var.desired_capacity
 	tag     {
 		key = "name"
 		value = "${var.cluster_name}-asg"

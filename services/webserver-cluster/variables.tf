@@ -20,3 +20,18 @@ variable "db_remote_state_key" {
 	type = string
 	}
 
+variable "min_size" {
+	description = "Minimum size of cluster"
+	type = number
+	}
+
+variable "max_size" {
+	description = "Maximum size of the cluster"
+	type = number
+	}
+
+variable "desired_capacity" {
+	description = "Desired cluster size"
+	type = number
+	}
+
