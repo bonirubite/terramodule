@@ -33,7 +33,7 @@ locals {
 	
 resource "aws_launch_configuration" "instance_1" {
         image_id = "ami-09a5c873bc79530d9"
-	instance_type = "t2.micro"
+	instance_type = var.instance_type
 	security_groups = [aws_security_group.instance_1.id]
 	#user_data = <<-EOF
 	#		#!/bin/bash
